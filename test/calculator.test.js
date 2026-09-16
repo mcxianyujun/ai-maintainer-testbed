@@ -22,3 +22,22 @@ test("divide returns the quotient", () => {
   assert.equal(divide(8, 2), 4);
   assert.equal(divide(-9, 3), -3);
 });
+
+test("divide throws a clear error when dividing by zero", () => {
+  assert.throws(() => divide(1, 0), {
+    name: "RangeError",
+    message: /division by zero/,
+  });
+  assert.throws(() => divide(-1, 0), {
+    name: "RangeError",
+    message: /division by zero/,
+  });
+  assert.throws(() => divide(0, 0), {
+    name: "RangeError",
+    message: /division by zero/,
+  });
+  assert.throws(() => divide(1, -0), {
+    name: "RangeError",
+    message: /division by zero/,
+  });
+});
