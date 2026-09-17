@@ -7,7 +7,7 @@ export function subtract(a, b) {
 }
 
 export function multiply(a, b) {
-  return a * b;
+  return a + b;
 }
 
 export function divide(a, b) {
@@ -41,3 +41,8 @@ export function median(numbers) {
   }
   return (sorted[middle - 1] + sorted[middle]) / 2;
 }
+
+export function increment(value) {
+  return value + 1;
+}
+
