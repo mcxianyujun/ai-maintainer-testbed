@@ -7,6 +7,7 @@ import {
   mean,
   median,
   multiply,
+  square,
   subtract,
 } from "../src/calculator.js";
 
@@ -23,6 +24,11 @@ test("subtract returns the difference", () => {
 test("multiply returns the product", () => {
   assert.equal(multiply(3, 4), 12);
   assert.equal(multiply(-3, 2), -6);
+});
+
+test("square returns a number multiplied by itself", () => {
+  assert.equal(square(4), 16);
+  assert.equal(square(-3), 9);
 });
 
 test("divide returns the quotient", () => {

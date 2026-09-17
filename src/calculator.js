@@ -10,6 +10,10 @@ export function multiply(a, b) {
   return a * b;
 }
 
+export function square(value) {
+  return multiply(value, value);
+}
+
 export function divide(a, b) {
   if (b === 0) {
     throw new RangeError("divide(): division by zero is not allowed");
